@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static ResourceManager;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public TMP_Text mainMenuCounter;
+    public TMP_Text counter;
     public static int crown = 50;
     public static int health = 50;
     public static int knowledge = 50;
@@ -72,6 +75,7 @@ public class GameManager : MonoBehaviour
                 {
                     NewCard();
                 }
+                counter.text = (int.Parse(counter.text) + 1).ToString();
             }
         }
         else if (cardGameObject.transform.position.x < -fSideTrigger)
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
                 {
                     NewCard();
                 }
+                counter.text = (int.Parse(counter.text) + 1).ToString();
             }
         }
         UpdateDialogue();
@@ -137,9 +142,13 @@ public class GameManager : MonoBehaviour
         health = 50;
         knowledge = 50;
         money = 50;
-}
+
+        // mainMenuCounter.text = (int.Parse(mainMenuCounter.text) + int.Parse(counter.text)).ToString();
+        // SceneManager.LoadScene("Menu");
+    }
     public void Substitute()
     {
 
     }
+
 }

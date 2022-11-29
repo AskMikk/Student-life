@@ -11,7 +11,6 @@ public class StatsManager : MonoBehaviour
     public Image health;
     public Image knowledge;
     public Image money;
-
     public Image crownDot;
     public Image healthDot;
     public Image knowledgeDot;
