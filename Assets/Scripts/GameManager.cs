@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        LoadCard(testCard);
+        NewCard();
     }
 
 
