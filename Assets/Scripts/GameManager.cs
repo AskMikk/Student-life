@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour
                     NewCard();
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
+                PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") + 1);
+
             }
         }
         else if (cardGameObject.transform.position.x < -fSideTrigger)
@@ -92,6 +94,7 @@ public class GameManager : MonoBehaviour
                     NewCard();
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
+                PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") +1);
             }
         }
         UpdateDialogue();
@@ -143,12 +146,9 @@ public class GameManager : MonoBehaviour
         knowledge = 50;
         money = 50;
 
-        // mainMenuCounter.text = (int.Parse(mainMenuCounter.text) + int.Parse(counter.text)).ToString();
-        // SceneManager.LoadScene("Menu");
+        //mainMenuCounter.text = PlayerPrefs.GetInt("TotalDays").ToString();
+        //SceneManager.LoadScene("Menu");
     }
-    public void Substitute()
-    {
 
-    }
 
 }
