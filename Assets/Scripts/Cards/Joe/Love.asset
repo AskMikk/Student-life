@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Love
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: Love
   dialogue: 'Should i tell that girl how i feel about her? '
   leftQuote: No, i m gonna embarrisse myself

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Going_out
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: Going_out
   dialogue: I think i should drink some beer with my friends
   leftQuote: 'No, i have to prepare for class '

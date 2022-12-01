@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Presenting_Project
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: 'Presenting_PRoject '
   dialogue: 'Should i present now my project? '
   leftQuote: No, i am too shy.

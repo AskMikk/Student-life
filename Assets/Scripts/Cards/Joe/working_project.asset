@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: working_project
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: working_project
   dialogue: 'Netflix or working my project? I dont know what to choose '
   leftQuote: Netflix seems pretty cool

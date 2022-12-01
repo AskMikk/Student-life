@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dealing_with_Drugs
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: Dealing_with_Drugs
   dialogue: Do you want to buy some drugs, kid?
   leftQuote: 'Yes! I am lovin it! '

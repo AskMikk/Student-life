@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fight
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: 
   dialogue: 'So Joe, wanna go behind the house and sort it out? '
   leftQuote: I am gonna beat you up!

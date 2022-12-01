@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Exam_cheating
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: Cheating
   dialogue: Why do you cheat in the Exam?
   leftQuote: Its not your business!

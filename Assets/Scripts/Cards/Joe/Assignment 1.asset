@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Assignment 1
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: 'Assignment '
   dialogue: 'So, should i do my Assignment now? '
   leftQuote: No, i can do it tomorrow

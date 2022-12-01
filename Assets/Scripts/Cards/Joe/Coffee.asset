@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coffee
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: 'Coffee '
   dialogue: I wanna show the girl on our 2nd date the oldest coffee in Tallinn
   leftQuote: 'Sounds boring! Make something else '

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cinema
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 1
+  sprite: 8
   cardName: 'Cinema '
   dialogue: 'I go out with the girl i really like. Maybe to a cinema? '
   leftQuote: No, I think cinema is boring for the 1st date
