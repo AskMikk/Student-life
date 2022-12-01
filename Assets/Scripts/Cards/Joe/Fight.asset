@@ -18,7 +18,7 @@ MonoBehaviour:
   dialogue: 'So Joe, wanna go behind the house and sort it out? '
   leftQuote: I am gonna beat you up!
   rightQuote: 'Well, no. Not really '
-  RiCrown: -10
+  RiCrown: -5
   RiHealth: 0
   RiKnowledge: 0
   RiMoney: 0

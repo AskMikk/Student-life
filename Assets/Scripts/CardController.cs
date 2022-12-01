@@ -31,7 +31,7 @@ public enum CardSprite
     DeathMinMaxHealth,
     DeathMinStudy,
     DeathMaxStudy,
-    Text,
+    Loop,
     Joe,
     Sarah,
     Rasta,

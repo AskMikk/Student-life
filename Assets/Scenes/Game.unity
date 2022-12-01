@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1991,11 +1991,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 44b6a00ea667e2541adcbb770e0e43df, type: 3}
   - {fileID: 21300000, guid: ef5008ed50149bf43a5ff6306e980cba, type: 3}
   cards:
-
   - {fileID: 11400000, guid: 6e6f07831317e46f393977b040e4daf9, type: 2}
-  - {fileID: 11400000, guid: 6b3de3fa516f79c449d7218c2582d501, type: 2}
-  - {fileID: 11400000, guid: 87dd2e2d201111f4e89a37bead7e631d, type: 2}
-  - {fileID: 11400000, guid: e1ef96878c3bcfc41bb6d9a21df8503b, type: 2}
   - {fileID: 11400000, guid: 7e31612a7ffc8d84fbf16e8ff5507df4, type: 2}
   - {fileID: 11400000, guid: 359f408e3a3f93e4c9510965f5621579, type: 2}
   - {fileID: 11400000, guid: 64227ebb9492a4f46954433968c2dd92, type: 2}
@@ -2007,7 +2003,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f387ffe85e63654d81e55ac05fbf6cb, type: 2}
   - {fileID: 11400000, guid: d44fd8fe4a131584a91a5c330030e7c1, type: 2}
   - {fileID: 11400000, guid: 0319054c2aa19b242853597bc9079b66, type: 2}
-  - {fileID: 11400000, guid: 182fe41338aa99c46a5830266ad6465d, type: 2}
   - {fileID: 11400000, guid: 3e0a489b6a98b294f969e16c671cef91, type: 2}
   - {fileID: 11400000, guid: 21bb834aa6067754da61102def2cad0e, type: 2}
   - {fileID: 11400000, guid: f8b914e9568089b4fa4e4c380455252a, type: 2}
@@ -2458,8 +2453,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.6
-  m_fontSizeBase: 1.6
+  m_fontSize: 1
+  m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0

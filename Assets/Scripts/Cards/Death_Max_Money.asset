@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 0
   sprite: 1
-  cardName: You got robbed and shot!
-  dialogue: 
+  cardName: 
+  dialogue: You got robbed and shot!
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0

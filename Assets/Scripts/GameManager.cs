@@ -83,11 +83,40 @@ public class GameManager : MonoBehaviour
      			if (int.Parse(counter.text) >= 30)
                 {
                     LoopCard();
-                } 
-				else if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
-                {
-                    GameOver();
                 }
+                else if (money < minValue)
+                {
+                    GameOver(1);
+                }
+                else if (money >= maxValue)
+                {
+                    GameOver(2);
+                }
+                else if (crown < minValue)
+                {
+                    GameOver(3);
+                }
+                else if (crown >= maxValue)
+                {
+                    GameOver(4);
+                }
+                else if (health < minValue)
+                {
+                    GameOver(5);
+                }
+                else if (health >= maxValue)
+                {
+                    GameOver(6);
+                }
+                else if (knowledge < minValue)
+                {
+                    GameOver(7);
+                }
+                else if (knowledge >= maxValue)
+                {
+                    GameOver(8);
+                }
+
                 else
                 {
                     NewCard(int.Parse(counter.text));
@@ -109,15 +138,41 @@ public class GameManager : MonoBehaviour
                 if (int.Parse(counter.text) >= 30)
                 {
                     LoopCard();
-                } 
-				else if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
+                }
+                else if (money < minValue)
                 {
-                    GameOver();
+                    GameOver(1);
+                }
+                else if (money >= maxValue)
+                {
+                    GameOver(2);
+                }
+                else if (crown < minValue)
+                {
+                    GameOver(3);
+                }
+                else if (crown >= maxValue)
+                {
+                    GameOver(4);
+                }
+                else if (health < minValue)
+                {
+                    GameOver(5);
+                }
+                else if (health >= maxValue)
+                {
+                    GameOver(6);
+                }
+                else if (knowledge < minValue)
+                {
+                    GameOver(7);
+                }
+                else if (knowledge >= maxValue)
+                {
+                    GameOver(8);
                 }
                 else 
                 {
-                    
-
                     NewCard(int.Parse(counter.text));
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
@@ -165,27 +220,32 @@ public class GameManager : MonoBehaviour
     public void NewCard(int count)
     {
   		if (0 <= count && count <= 5) {
-			int rollDice = Random.Range(2, 5);
+			int rollDice = Random.Range(9, 12);
         	LoadCard(resourceManager.cards[rollDice]);
-		} else if (2 <= count && count <= 10) {
-			int rollDice = Random.Range(2, 10);
+		} 
+        else if (2 <= count && count <= 10) {
+			int rollDice = Random.Range(9, 16);
         	LoadCard(resourceManager.cards[rollDice]);
 		}
-    }
+        else  if (10 <= count) {
+            int rollDice = Random.Range(9, resourceManager.cards.Length);
+            LoadCard(resourceManager.cards[rollDice]);
+        }
 
+    }
     public void LoopCard()
     {
 		loop = 1;
         LoadCard(resourceManager.cards[0]);
     }
 
-    public void GameOver()
+    public void GameOver(int death)
     {
         crown = 0;
         health = 0;
         knowledge = 0;
         money = 0;
-        LoadCard(resourceManager.cards[1]);
+        LoadCard(resourceManager.cards[death]);
     }
 
     public void RouteToMainMenu()

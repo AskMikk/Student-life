@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LoopCard
   m_EditorClassIdentifier: 
   cardID: -1
-  sprite: 0
+  sprite: 7
   cardName: LoopCard
   dialogue: You are in the loop
   leftQuote: Go Again

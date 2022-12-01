@@ -33,7 +33,6 @@ public class StatsManager : MonoBehaviour
 
         if (card.transform.position.x < gameManager.fSideTrigger * -1)
         {
-            Debug.Log(gameManager.currentCard.RiCrown);
             if (gameManager.currentCard.RiCrown != 0) 
             {
                 crownDot.transform.localScale = new Vector3(1, 1, 0);
@@ -69,7 +68,6 @@ public class StatsManager : MonoBehaviour
         }
         else if (card.transform.position.x > gameManager.fSideTrigger)
         {
-            Debug.Log(gameManager.currentCard.LiCrown);
             if (gameManager.currentCard.LiCrown != 0)
             {
                 crownDot.transform.localScale = new Vector3(1, 1, 0);

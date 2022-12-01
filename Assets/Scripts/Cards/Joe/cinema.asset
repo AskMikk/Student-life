@@ -21,7 +21,7 @@ MonoBehaviour:
   RiCrown: 10
   RiHealth: 0
   RiKnowledge: 0
-  RiMoney: -10
+  RiMoney: -5
   LiCrown: -10
   LiHealth: 0
   LiKnowledge: 0
