@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0ff851706767034ca6b0defe7a54f4e, type: 3}
-  m_Name: GameOver
+  m_Name: Coffee
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 0
-  cardName: GameOver
-  dialogue: You Died!
-  leftQuote: Lol
-  rightQuote: Oke
-  RiCrown: 0
-  RiHealth: 0
-  RiKnowledge: 0
-  RiMoney: 0
-  LiCrown: 0
+  sprite: 1
+  cardName: 'Coffee '
+  dialogue: I wanna show the girl on our 2nd date the oldest coffee in Tallinn
+  leftQuote: 'Sounds boring! Make something else '
+  rightQuote: 'Yea girls think its romantic '
+  RiCrown: 10
+  RiHealth: 5
+  RiKnowledge: 5
+  RiMoney: -10
+  LiCrown: -10
   LiHealth: 0
-  LiKnowledge: 0
+  LiKnowledge: -5
   LiMoney: 0

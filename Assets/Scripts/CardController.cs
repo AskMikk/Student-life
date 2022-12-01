@@ -24,9 +24,16 @@ public class CardController : MonoBehaviour
 
 public enum CardSprite
 {
-    Death,
+    DeathMinMoney,
+    DeathMaxMoney,
+    DeathMinRep,
+    DeathMaxRep,
+    DeathMinMaxHealth,
+    DeathMinStudy,
+    DeathMaxStudy,
+    Text,
     Joe,
     Sarah,
     Rasta,
-    Rocket
+    
 }

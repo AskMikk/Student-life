@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0ff851706767034ca6b0defe7a54f4e, type: 3}
-  m_Name: Meeting
+  m_Name: Death_Max_Money
   m_EditorClassIdentifier: 
   cardID: 0
   sprite: 1
-  cardName: Hello
-  dialogue: Yo!
-  leftQuote: Hello
-  rightQuote: Bye
-  RiCrown: 20
-  RiHealth: 20
-  RiKnowledge: 20
+  cardName: You got robbed and shot!
+  dialogue: 
+  leftQuote: Menu
+  rightQuote: Menu
+  RiCrown: 0
+  RiHealth: 0
+  RiKnowledge: 0
   RiMoney: 0
-  LiCrown: -30
+  LiCrown: 0
   LiHealth: 0
-  LiKnowledge: -30
-  LiMoney: -30
+  LiKnowledge: 0
+  LiMoney: 0

@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
     }
     public void NewCard()
     {
-        int rollDice = Random.Range(1, resourceManager.cards.Length);
+        int rollDice = Random.Range(8, resourceManager.cards.Length);
         LoadCard(resourceManager.cards[rollDice]);
     }
     public void GameOver()
