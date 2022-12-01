@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0ff851706767034ca6b0defe7a54f4e, type: 3}
-  m_Name: GameOver
+  m_Name: Dealing_with_Drugs
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 0
-  cardName: GameOver
-  dialogue: You Died!
-  leftQuote: Lol
-  rightQuote: Oke
-  RiCrown: 0
-  RiHealth: 0
-  RiKnowledge: 0
-  RiMoney: 0
-  LiCrown: 0
-  LiHealth: 0
-  LiKnowledge: 0
-  LiMoney: 0
+  sprite: 8
+  cardName: Dealing_with_Drugs
+  dialogue: Do you want to buy some drugs, kid?
+  leftQuote: 'Yes! I am lovin it! '
+  rightQuote: No,thanks! I care about my health
+  RiCrown: -5
+  RiHealth: 10
+  RiKnowledge: 5
+  RiMoney: 5
+  LiCrown: 5
+  LiHealth: -10
+  LiKnowledge: -5
+  LiMoney: -5

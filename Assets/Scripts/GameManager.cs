@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
         knowledge = 50;
         money = 50;
 		loop = 0;
-        NewCard();
+
+        NewCard(0);
     }
 
 
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    NewCard();
+                    NewCard(int.Parse(counter.text));
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
                 PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") + 1);
@@ -116,7 +117,8 @@ public class GameManager : MonoBehaviour
                 else 
                 {
                     
-                    NewCard();
+
+                    NewCard(int.Parse(counter.text));
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
                 PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") +1);
@@ -159,10 +161,16 @@ public class GameManager : MonoBehaviour
         cardGameObject.transform.eulerAngles = initRotation;
     }
 
-    public void NewCard()
+
+    public void NewCard(int count)
     {
-        int rollDice = Random.Range(2, resourceManager.cards.Length);
-        LoadCard(resourceManager.cards[rollDice]);
+  		if (0 <= count && count <= 5) {
+			int rollDice = Random.Range(2, 5);
+        	LoadCard(resourceManager.cards[rollDice]);
+		} else if (2 <= count && count <= 10) {
+			int rollDice = Random.Range(2, 10);
+        	LoadCard(resourceManager.cards[rollDice]);
+		}
     }
 
     public void LoopCard()
@@ -189,5 +197,4 @@ public class GameManager : MonoBehaviour
 		loop = 0;
         SceneManager.LoadScene("Menu");
     }
-
 }

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0ff851706767034ca6b0defe7a54f4e, type: 3}
-  m_Name: Start Screen
+  m_Name: Death_Max_Money
   m_EditorClassIdentifier: 
   cardID: 0
-  sprite: 4
-  cardName: Start Screen
-  dialogue: Start Game
-  leftQuote: Start Game
-  rightQuote: Start Game
+  sprite: 1
+  cardName: You got robbed and shot!
+  dialogue: 
+  leftQuote: Menu
+  rightQuote: Menu
   RiCrown: 0
   RiHealth: 0
   RiKnowledge: 0
