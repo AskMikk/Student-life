@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static ResourceManager;
+using static StatsManager;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -15,10 +16,12 @@ public class GameManager : MonoBehaviour
     public static int money = 50;
     public static int maxValue = 100;
     public static int minValue = 0;
+    public static int loop = 0;
     public GameObject cardGameObject;
     public CardController mainCardController;
     public SpriteRenderer cardSpriteRenderer;
     public ResourceManager resourceManager;
+    public StatsManager statsManager;
     public float fMovingSpeed;
     public float fSideTrigger;
     float alphaText;
@@ -41,7 +44,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        NewCard();
+    	crown = 50;
+        health = 50;
+        knowledge = 50;
+        money = 50;
+		loop = 0;
+        NewCard(0);
     }
 
 
@@ -66,18 +74,22 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (crown == 0 || health == 0 || knowledge == 0 || money == 0)
+                if (crown == 0 || health == 0 || knowledge == 0 || money == 0 || loop == 1)
                 {
                     RouteToMainMenu();
                 }
                 currentCard.Left();
-                if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
+     			if (int.Parse(counter.text) >= 30)
+                {
+                    LoopCard();
+                } 
+				else if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
                 {
                     GameOver();
                 }
                 else
                 {
-                    NewCard();
+                    NewCard(int.Parse(counter.text));
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
                 PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") + 1);
@@ -88,18 +100,23 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0)) 
             {
-                if (crown == 0 || health == 0 || knowledge == 0 || money == 0)
+                if (crown == 0 || health == 0 || knowledge == 0 || money == 0 || loop == 1)
                 {
                     RouteToMainMenu();
                 }
                 currentCard.Right();
-                if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
+                if (int.Parse(counter.text) >= 30)
+                {
+                    LoopCard();
+                } 
+				else if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
                 {
                     GameOver();
                 }
                 else 
                 {
-                    NewCard();
+                    
+                    NewCard(int.Parse(counter.text));
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
                 PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") +1);
@@ -141,24 +158,31 @@ public class GameManager : MonoBehaviour
         isSubstituting = true;
         cardGameObject.transform.eulerAngles = initRotation;
     }
-    public void NewCard()
+
+    public void NewCard(int count)
     {
-        int rollDice = Random.Range(8, resourceManager.cards.Length);
-        LoadCard(resourceManager.cards[rollDice]);
+  		if (0 <= count && count <= 5) {
+			int rollDice = Random.Range(2, 5);
+        	LoadCard(resourceManager.cards[rollDice]);
+		} else if (2 <= count && count <= 10) {
+			int rollDice = Random.Range(2, 10);
+        	LoadCard(resourceManager.cards[rollDice]);
+		}
     }
+
+    public void LoopCard()
+    {
+		loop = 1;
+        LoadCard(resourceManager.cards[0]);
+    }
+
     public void GameOver()
     {
         crown = 0;
         health = 0;
         knowledge = 0;
         money = 0;
-        LoadCard(resourceManager.cards[0]);
-        
-
-      
-
-        //mainMenuCounter.text = PlayerPrefs.GetInt("TotalDays").ToString();
-        //SceneManager.LoadScene("Menu");
+        LoadCard(resourceManager.cards[1]);
     }
 
     public void RouteToMainMenu()
@@ -167,7 +191,7 @@ public class GameManager : MonoBehaviour
         health = 50;
         knowledge = 50;
         money = 50;
+		loop = 0;
         SceneManager.LoadScene("Menu");
     }
-
 }
