@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
         knowledge = 50;
         money = 50;
 		loop = 0;
+
         NewCard(0);
     }
 
@@ -116,6 +117,7 @@ public class GameManager : MonoBehaviour
                 else 
                 {
                     
+
                     NewCard(int.Parse(counter.text));
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
@@ -158,6 +160,7 @@ public class GameManager : MonoBehaviour
         isSubstituting = true;
         cardGameObject.transform.eulerAngles = initRotation;
     }
+
 
     public void NewCard(int count)
     {
