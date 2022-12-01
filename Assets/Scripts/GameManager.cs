@@ -74,11 +74,6 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-				Debug.Log(counter.text);
-				Debug.Log(crown);
-				Debug.Log(health);
-				Debug.Log(knowledge);
-				Debug.Log(money);
                 if (crown == 0 || health == 0 || knowledge == 0 || money == 0 || loop == 1)
                 {
                     RouteToMainMenu();
@@ -105,11 +100,6 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0)) 
             {
-				Debug.Log(counter.text);
-				Debug.Log(crown);
-				Debug.Log(health);
-				Debug.Log(knowledge);
-				Debug.Log(money);
                 if (crown == 0 || health == 0 || knowledge == 0 || money == 0 || loop == 1)
                 {
                     RouteToMainMenu();
