@@ -66,6 +66,10 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
+                if (crown == 0 || health == 0 || knowledge == 0 || money == 0)
+                {
+                    RouteToMainMenu();
+                }
                 currentCard.Left();
                 if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
                 {
@@ -84,6 +88,10 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0)) 
             {
+                if (crown == 0 || health == 0 || knowledge == 0 || money == 0)
+                {
+                    RouteToMainMenu();
+                }
                 currentCard.Right();
                 if (crown >= maxValue || health >= maxValue || knowledge >= maxValue || money >= maxValue || crown < minValue || health < minValue || knowledge < minValue || money < minValue)
                 {
@@ -140,15 +148,26 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
+        crown = 0;
+        health = 0;
+        knowledge = 0;
+        money = 0;
         LoadCard(resourceManager.cards[0]);
-        crown = 50;
-        health = 50;
-        knowledge = 50;
-        money = 50;
+        
+
+      
 
         //mainMenuCounter.text = PlayerPrefs.GetInt("TotalDays").ToString();
         //SceneManager.LoadScene("Menu");
     }
 
+    public void RouteToMainMenu()
+    {
+        crown = 50;
+        health = 50;
+        knowledge = 50;
+        money = 50;
+        SceneManager.LoadScene("Menu");
+    }
 
 }
