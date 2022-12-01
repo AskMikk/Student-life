@@ -1978,15 +1978,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 4feaf8b67ae78f241b700975d91f97cd, type: 3}
+  - {fileID: 21300000, guid: dcf60b5b643dc46428040265e57b8b25, type: 3}
+  - {fileID: 21300000, guid: 5c6db2a7d589d6b4aa1fafbbe90e8459, type: 3}
+  - {fileID: 21300000, guid: 227e7ab1169c20146a3cfa4077e21082, type: 3}
+  - {fileID: 21300000, guid: 397a6d38c50d46c4facb2223d6608ccf, type: 3}
+  - {fileID: 21300000, guid: 263dbf5c18024b542a689072abe7fdab, type: 3}
+  - {fileID: 21300000, guid: acd7e7d6f7e0fcb41934131008263917, type: 3}
+  - {fileID: 21300000, guid: 8b8fb5910ba99ea459742f12f4925b51, type: 3}
+  - {fileID: 21300000, guid: 64f0f3727d45d604f856ddb9296b993a, type: 3}
   - {fileID: 21300000, guid: 5ecb990b0ea04e442b7da896eb328ae7, type: 3}
   - {fileID: 21300000, guid: 44b6a00ea667e2541adcbb770e0e43df, type: 3}
   - {fileID: 21300000, guid: ef5008ed50149bf43a5ff6306e980cba, type: 3}
-  - {fileID: 21300000, guid: 77e75e44b36d86641a99692b8bfad5cd, type: 3}
   cards:
-  - {fileID: 11400000, guid: 6b3de3fa516f79c449d7218c2582d501, type: 2}
-  - {fileID: 11400000, guid: 87dd2e2d201111f4e89a37bead7e631d, type: 2}
-  - {fileID: 11400000, guid: e1ef96878c3bcfc41bb6d9a21df8503b, type: 2}
+  - {fileID: 11400000, guid: 7e31612a7ffc8d84fbf16e8ff5507df4, type: 2}
+  - {fileID: 11400000, guid: 359f408e3a3f93e4c9510965f5621579, type: 2}
+  - {fileID: 11400000, guid: 64227ebb9492a4f46954433968c2dd92, type: 2}
+  - {fileID: 11400000, guid: 1f208e6fb6948bf499ef7813049c4d56, type: 2}
+  - {fileID: 11400000, guid: e433364225579754db92ef839536dfb3, type: 2}
+  - {fileID: 11400000, guid: f5e4d4f99e7b19c46bea7bd81a97d49d, type: 2}
+  - {fileID: 11400000, guid: b3dc8f7abae4c3043b16ef4e86ad5fd1, type: 2}
+  - {fileID: 11400000, guid: 829369b41f3a35b468d1a97cf981bb6f, type: 2}
+  - {fileID: 11400000, guid: 2f387ffe85e63654d81e55ac05fbf6cb, type: 2}
+  - {fileID: 11400000, guid: d44fd8fe4a131584a91a5c330030e7c1, type: 2}
+  - {fileID: 11400000, guid: 0319054c2aa19b242853597bc9079b66, type: 2}
+  - {fileID: 11400000, guid: 182fe41338aa99c46a5830266ad6465d, type: 2}
+  - {fileID: 11400000, guid: 3e0a489b6a98b294f969e16c671cef91, type: 2}
+  - {fileID: 11400000, guid: 21bb834aa6067754da61102def2cad0e, type: 2}
+  - {fileID: 11400000, guid: f8b914e9568089b4fa4e4c380455252a, type: 2}
+  - {fileID: 11400000, guid: 0fe6a0d5e294dce4b90d31dd9b604502, type: 2}
+  - {fileID: 11400000, guid: 99f7a57bddef02942ae1fa10514f3729, type: 2}
 --- !u!114 &1595272995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2468,7 +2488,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8.745034, y: 5.7109237, z: 8.748416, w: -1.113819}
+  m_margin: {x: 8.745034, y: 5.7109237, z: 8.748416, w: -1.0285319}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

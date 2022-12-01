@@ -194,5 +194,4 @@ public class GameManager : MonoBehaviour
 		loop = 0;
         SceneManager.LoadScene("Menu");
     }
-
 }
