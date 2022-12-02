@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         money = 50;
 		loop = 0;
 
-        NewCard(0);
+        NewCard();
     }
 
 
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
 
                 else
                 {
-                    NewCard(int.Parse(counter.text));
+                    NewCard();
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
                 PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") + 1);
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
                 }
                 else 
                 {
-                    NewCard(int.Parse(counter.text));
+                    NewCard();
                 }
                 counter.text = (int.Parse(counter.text) + 1).ToString();
                 PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") +1);
@@ -217,17 +217,23 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void NewCard(int count)
+    public void NewCard()
     {
-  		if (0 <= count && count <= 5) {
-			int rollDice = Random.Range(9, 12);
+        int count = PlayerPrefs.GetInt("TotalDays", 0);
+        if (0 <= count && count <= 15) {
+			int rollDice = Random.Range(9, 20);
         	LoadCard(resourceManager.cards[rollDice]);
 		} 
-        else if (2 <= count && count <= 10) {
-			int rollDice = Random.Range(9, 16);
+        else if (15 <= count && count <= 30) {
+			int rollDice = Random.Range(9, 29);
         	LoadCard(resourceManager.cards[rollDice]);
 		}
-        else  if (10 <= count) {
+        else if (30 <= count && count <= 45)
+        {
+            int rollDice = Random.Range(9, 40);
+            LoadCard(resourceManager.cards[rollDice]);
+        }
+        else  if (45 <= count) {
             int rollDice = Random.Range(9, resourceManager.cards.Length);
             LoadCard(resourceManager.cards[rollDice]);
         }
