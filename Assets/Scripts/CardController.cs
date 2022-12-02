@@ -34,6 +34,15 @@ public enum CardSprite
     Loop,
     Joe,
     Sarah,
-    Rasta,
-    
+    Aidan,
+    Amara,
+    Asnee,
+    Boris,
+    Diego,
+    Harald,
+    Kianu,
+    Kylie,
+    Madhu,
+    Oliver,
+    Peeter
 }

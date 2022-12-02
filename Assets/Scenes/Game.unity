@@ -1990,6 +1990,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5ecb990b0ea04e442b7da896eb328ae7, type: 3}
   - {fileID: 21300000, guid: 44b6a00ea667e2541adcbb770e0e43df, type: 3}
   - {fileID: 21300000, guid: ef5008ed50149bf43a5ff6306e980cba, type: 3}
+  - {fileID: 21300000, guid: deb3544bfbf95374d9b22ade9b853c05, type: 3}
+  - {fileID: 21300000, guid: 70b59becb0801a943be3a6bae7be0744, type: 3}
+  - {fileID: 21300000, guid: 1ff51b25c352a684ba4fdc320d5038cd, type: 3}
+  - {fileID: 21300000, guid: c4741472bea198c4294a2455c0d723c1, type: 3}
+  - {fileID: 21300000, guid: df9de31c445f7ae4c910f5bcb67d664d, type: 3}
+  - {fileID: 21300000, guid: e50a937a74719fc46993fa008be38f7d, type: 3}
+  - {fileID: 21300000, guid: be262c65437bba641b0eb03d73dd684c, type: 3}
+  - {fileID: 21300000, guid: ef5008ed50149bf43a5ff6306e980cba, type: 3}
+  - {fileID: 21300000, guid: ef5008ed50149bf43a5ff6306e980cba, type: 3}
+  - {fileID: 21300000, guid: 9c4e11b7f405324419de9d35e9180e3a, type: 3}
   cards:
   - {fileID: 11400000, guid: 6e6f07831317e46f393977b040e4daf9, type: 2}
   - {fileID: 11400000, guid: 7e31612a7ffc8d84fbf16e8ff5507df4, type: 2}
@@ -2862,7 +2872,7 @@ Transform:
   m_GameObject: {fileID: 1982973378}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: -918.72107, y: -6278.8, z: 6229.6367}
-  m_LocalScale: {x: 1.97, y: 1.9698, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1435146978}
@@ -3229,7 +3239,7 @@ Transform:
   m_GameObject: {fileID: 2022099094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.10986328}
-  m_LocalScale: {x: 1.97, y: 1.9698, z: 0}
+  m_LocalScale: {x: 1.01, y: 1.01, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2021144191}
