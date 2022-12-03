@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0)) 
             {
-                if (crown == 0 || health == 0 || knowledge == 0 || money == 0 || loop == 1)
+                if (crown == -100 || health == -100 || knowledge == -100 || money == -100 || loop == 1)
                 {
                     RouteToMainMenu();
                 }
@@ -247,10 +247,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(int death)
     {
-        crown = 0;
-        health = 0;
-        knowledge = 0;
-        money = 0;
+        crown = -100;
+        health = -100;
+        knowledge = -100;
+        money = -100;
         LoadCard(resourceManager.cards[death]);
     }
 
