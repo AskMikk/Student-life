@@ -11,4 +11,29 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial1");
+    }
+
+    public void Story()
+    {
+        SceneManager.LoadScene("Story");
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void ToTutorial2()
+    {
+        SceneManager.LoadScene("Tutorial2");
+    }
+
+    public void ToTutorial3()
+    {
+        SceneManager.LoadScene("Tutorial3");
+    }
+
 }
