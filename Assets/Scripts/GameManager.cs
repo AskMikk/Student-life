@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public Vector3 cardRotation;
     public Vector3 currentRotation;
     public Vector3 initRotation;
+    public bool isFirstPlaythrough = true;
 
     void Start()
     {
@@ -49,7 +50,6 @@ public class GameManager : MonoBehaviour
         knowledge = 50;
         money = 50;
 		loop = 0;
-
         NewCard();
     }
 
@@ -202,7 +202,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadCard(Card card) 
+    public void LoadPlotText() 
+    {
+        cardSpriteRenderer.sprite = null;
+        characterDialogue.text = "If you believe the calendar, today is September 1, 1980, this is the fourth time in my life that I have experienced this date... Everything is like groundhog Day, except that I have not 1 day of time, but a whole month. The first time I 'woke up' in a new reality for myself, I thought that I had something wrong with my head, for a long time I could not believe that all this was real, eventually I made a couple of fatal mistakes and died... I stopped paying any attention to everything that was happening around me, I didn't really eat or sleep. At some point, I had a strong pain in my chest, it was unbearably painful, and a second later I woke up in my bed, and the date was on the calendar again - September 1, 1980. The second time it was a little different, I noticed that the university has changed a little, new teachers and students have appeared, the atmosphere has changed. The world seemed to be invisibly different from what it was last time. I thought that I would deal with this later, and this time I will just try to use all the useful information from the past two lives for my own good and make as many new useful acquaintances as possible this month, perhaps by getting new information through them I will be able to understand what happened and how to get out of the loop. I really succeeded in this, I had a lot of new acquaintances! It seems even too much, because on September 14 I was trampled by a crowd of my own new friends... As I understood, this 'world' into which I got does not want me to stand out in something, it exaggerates all the results from my decisions several times, and if I start to stand out in something, it solves this problem in the most cardinal way... I'm still scared, I've died 2 times already... it shouldn't be like this. I have not yet figured out what to do and how to get out of this loop, so I will try to live a few 'months' without incident and see what it will lead to...Well, it's time to relive September 1, 1980 for the fourth time..";
+    }
+
+    public void LoadCard(Card card)
     {
         cardSpriteRenderer.sprite = resourceManager.sprites[(int)card.sprite];
         leftQuote = card.leftQuote;
@@ -220,6 +226,11 @@ public class GameManager : MonoBehaviour
     public void NewCard()
     {
         int count = PlayerPrefs.GetInt("TotalDays", 0);
+        if (isFirstPlaythrough) {
+            LoadPlotText();
+            isFirstPlaythrough = false;
+            return;
+        }
         if (0 <= count && count <= 15) {
 			int rollDice = Random.Range(9, 20);
         	LoadCard(resourceManager.cards[rollDice]);
@@ -237,7 +248,6 @@ public class GameManager : MonoBehaviour
             int rollDice = Random.Range(9, resourceManager.cards.Length);
             LoadCard(resourceManager.cards[rollDice]);
         }
-
     }
     public void LoopCard()
     {
