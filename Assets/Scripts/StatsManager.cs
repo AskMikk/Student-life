@@ -19,10 +19,16 @@ public class StatsManager : MonoBehaviour
     IEnumerator ChangeColorToRed(Image element)
     { 
         element.GetComponent<Image>().color = new Color(1, 0, 0);
-        yield return new WaitForSeconds(3);
-        element.GetComponent<Image>().color = new Color(0, 1, 0);
+        yield return new WaitForSeconds(1);
+        element.GetComponent<Image>().color = new Color(1, 1, 0);
     }
-    
+    IEnumerator ChangeColorToGreen(Image element)
+    {
+        element.GetComponent<Image>().color = new Color(0, 1, 0);
+        yield return new WaitForSeconds(1);
+        element.GetComponent<Image>().color = new Color(1, 1, 0);
+    }
+
     void Update()
     {
         crown.fillAmount =  (float) GameManager.crown / GameManager.maxValue;
@@ -40,6 +46,10 @@ public class StatsManager : MonoBehaviour
                 {
                     StartCoroutine(ChangeColorToRed(crown));
                 }
+                if (gameManager.currentCard.RiCrown > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(crown));
+                }
             }
             if (gameManager.currentCard.RiHealth != 0) 
             {
@@ -47,6 +57,10 @@ public class StatsManager : MonoBehaviour
                 if (gameManager.currentCard.RiHealth < 0)
                 {
                     StartCoroutine(ChangeColorToRed(health));
+                }
+                if (gameManager.currentCard.RiCrown > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(health));
                 }
             }
             if (gameManager.currentCard.RiKnowledge != 0) 
@@ -56,6 +70,10 @@ public class StatsManager : MonoBehaviour
                 {
                     StartCoroutine(ChangeColorToRed(knowledge));
                 }
+                if (gameManager.currentCard.RiCrown > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(knowledge));
+                }
             }
             if (gameManager.currentCard.RiMoney != 0) 
             {
@@ -63,6 +81,10 @@ public class StatsManager : MonoBehaviour
                 if (gameManager.currentCard.RiMoney < 0)
                 {
                     StartCoroutine(ChangeColorToRed(money));
+                }
+                if (gameManager.currentCard.RiCrown > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(money));
                 }
             }
         }
@@ -75,6 +97,10 @@ public class StatsManager : MonoBehaviour
                 {
                     StartCoroutine(ChangeColorToRed(crown));
                 }
+                if (gameManager.currentCard.LiCrown > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(crown));
+                }
             }
             if (gameManager.currentCard.LiHealth != 0)
             {
@@ -82,6 +108,10 @@ public class StatsManager : MonoBehaviour
                 if (gameManager.currentCard.LiHealth < 0)
                 {
                     StartCoroutine(ChangeColorToRed(health));
+                }
+                if (gameManager.currentCard.LiHealth > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(health));
                 }
             }
             if (gameManager.currentCard.LiKnowledge != 0)
@@ -91,6 +121,10 @@ public class StatsManager : MonoBehaviour
                 {
                     StartCoroutine(ChangeColorToRed(knowledge));
                 }
+                if (gameManager.currentCard.LiKnowledge > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(knowledge));
+                }
             }
             if (gameManager.currentCard.LiMoney != 0)
             {
@@ -98,6 +132,10 @@ public class StatsManager : MonoBehaviour
                 if (gameManager.currentCard.LiMoney < 0)
                 {
                     StartCoroutine(ChangeColorToRed(money));
+                }
+                if (gameManager.currentCard.LiMoney > 0)
+                {
+                    StartCoroutine(ChangeColorToGreen(money));
                 }
             }
         }
