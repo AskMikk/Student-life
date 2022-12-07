@@ -454,7 +454,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1898812010}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ToTutorial4
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: To Main
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51a1f570d198fe944a9c32add9369b00, type: 2}
   m_sharedMaterial: {fileID: -3289724307398216804, guid: 51a1f570d198fe944a9c32add9369b00,
@@ -775,7 +775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230.36395, y: 954}
+  m_AnchoredPosition: {x: -230.36395, y: 505}
   m_SizeDelta: {x: 259.4874, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444801983
@@ -798,10 +798,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The main rule of the game is to swipe card. There are two choices you
-    can make. Swipe right or left.  \n\nYour choices affect your indicators.\n\nIf
-    any of the indicators are completely filled or drop to a minimum, you will lose\n\nMax
-    amount of choices are 30. Then your run loops.\n"
+  m_text: Your stats are yellow, if your decision increases the stat, it is highlighted
+    in green, if it decreases, it is highlighted in red
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51a1f570d198fe944a9c32add9369b00, type: 2}
   m_sharedMaterial: {fileID: -3289724307398216804, guid: 51a1f570d198fe944a9c32add9369b00,

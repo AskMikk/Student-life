@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: -92}
+  m_AnchoredPosition: {x: 21, y: -113}
   m_SizeDelta: {x: 1080, y: 2400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454375192
@@ -405,7 +405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000026703, y: -782}
+  m_AnchoredPosition: {x: -14.000038, y: -696}
   m_SizeDelta: {x: 1098.7772, y: 300.7725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905208437
@@ -454,7 +454,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1898812010}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ToTutorial4
+        m_MethodName: ToChar1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -775,7 +775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230.36395, y: 954}
+  m_AnchoredPosition: {x: -186.36395, y: 810}
   m_SizeDelta: {x: 259.4874, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444801983
@@ -798,10 +798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The main rule of the game is to swipe card. There are two choices you
-    can make. Swipe right or left.  \n\nYour choices affect your indicators.\n\nIf
-    any of the indicators are completely filled or drop to a minimum, you will lose\n\nMax
-    amount of choices are 30. Then your run loops.\n"
+  m_text: The following are the characters that you can meet during the game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51a1f570d198fe944a9c32add9369b00, type: 2}
   m_sharedMaterial: {fileID: -3289724307398216804, guid: 51a1f570d198fe944a9c32add9369b00,
@@ -829,8 +826,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -44,13 +44,19 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-    	crown = 50;
+        crown = 50;
         health = 50;
         knowledge = 50;
         money = 50;
-		loop = 0;
+        loop = 0;
 
         NewCard();
+
+        if (PlayerPrefs.GetInt("TotalDays") == 0)
+        {
+            SceneManager.LoadScene("Story1");
+            PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") + 1);
+        }
     }
 
 

@@ -36,4 +36,35 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Tutorial3");
     }
 
+    public void ToTutorial4()
+    {
+        SceneManager.LoadScene("Tutorial4");
+    }
+
+    public void ToChar()
+    {
+        SceneManager.LoadScene("Char");
+    }
+    public void ToChar1()
+    {
+        SceneManager.LoadScene("Char1");
+    }
+
+    public void ToChar2()
+    {
+        SceneManager.LoadScene("Char2");
+    }
+    public void ToChar3()
+    {
+        SceneManager.LoadScene("Char3");
+    }
+    public void ToChar4()
+    {
+        SceneManager.LoadScene("Char4");
+    }
+    public void ToChar5()
+    {
+        SceneManager.LoadScene("Char5");
+    }
+
 }
