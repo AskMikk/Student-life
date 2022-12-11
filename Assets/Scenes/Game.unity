@@ -833,7 +833,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.7955556
+  orthographic size: 5.7943153
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1930,6 +1930,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuCounter: {fileID: 0}
   counter: {fileID: 205460963}
+  cardbefore: 10
+  rollDice: 0
   cardGameObject: {fileID: 2021144189}
   mainCardController: {fileID: 2021144193}
   cardSpriteRenderer: {fileID: 2021144190}
@@ -2295,8 +2297,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285697129
-  m_fontColor: {r: 0.4117647, g: 0.54901963, b: 0.4473267, a: 1}
+    rgba: 4279177017
+  m_fontColor: {r: 0.22352941, g: 0.05882353, b: 0.05882353, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2477,8 +2479,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285697129
-  m_fontColor: {r: 0.4117647, g: 0.54901963, b: 0.4473267, a: 1}
+    rgba: 4279177017
+  m_fontColor: {r: 0.22352941, g: 0.05882353, b: 0.05882353, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
