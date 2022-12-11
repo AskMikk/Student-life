@@ -15,7 +15,8 @@ MonoBehaviour:
   cardID: 0
   sprite: 5
   cardName: 
-  dialogue: You did not endure too exhausting work
+  dialogue: Your studied poorly and got kicked out of the university. You fell into
+    depression and commited suicide.
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0

@@ -15,7 +15,8 @@ MonoBehaviour:
   cardID: 0
   sprite: 2
   cardName: 
-  dialogue: You've been bullied, this is the end
+  dialogue: "You don\xB4t have any friends and respect from other. After some time
+    you got depressed and killed yourself."
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0
