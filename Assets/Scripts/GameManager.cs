@@ -15,8 +15,10 @@ public class GameManager : MonoBehaviour
     public static int knowledge = 50;
     public static int money = 50;
     public static int maxValue = 100;
-    public static int minValue = 0;
+    public static int minValue = 0; 
     public static int loop = 0;
+    public  int cardbefore = 10;
+    public  int rollDice;
     public GameObject cardGameObject;
     public CardController mainCardController;
     public SpriteRenderer cardSpriteRenderer;
@@ -51,12 +53,6 @@ public class GameManager : MonoBehaviour
         loop = 0;
 
         NewCard();
-
-        if (PlayerPrefs.GetInt("TotalDays") == 0)
-        {
-            SceneManager.LoadScene("Story1");
-            PlayerPrefs.SetInt("TotalDays", PlayerPrefs.GetInt("TotalDays") + 1);
-        }
     }
 
 
@@ -93,34 +89,82 @@ public class GameManager : MonoBehaviour
                 else if (money < minValue)
                 {
                     GameOver(1);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (money >= maxValue)
                 {
                     GameOver(2);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (crown < minValue)
                 {
                     GameOver(3);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (crown >= maxValue)
                 {
                     GameOver(4);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (health < minValue)
                 {
                     GameOver(5);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (health >= maxValue)
                 {
                     GameOver(6);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (knowledge < minValue)
                 {
                     GameOver(7);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (knowledge >= maxValue)
                 {
                     GameOver(8);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
 
                 else
@@ -148,34 +192,82 @@ public class GameManager : MonoBehaviour
                 else if (money < minValue)
                 {
                     GameOver(1);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (money >= maxValue)
                 {
                     GameOver(2);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (crown < minValue)
                 {
                     GameOver(3);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (crown >= maxValue)
                 {
                     GameOver(4);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (health < minValue)
                 {
                     GameOver(5);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (health >= maxValue)
                 {
                     GameOver(6);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (knowledge < minValue)
                 {
                     GameOver(7);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else if (knowledge >= maxValue)
                 {
                     GameOver(8);
+                    if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top1", 0)) { PlayerPrefs.SetInt("top1", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top2", 0)) { PlayerPrefs.SetInt("top2", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top3", 0)) { PlayerPrefs.SetInt("top3", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top4", 0)) { PlayerPrefs.SetInt("top4", PlayerPrefs.GetInt("TotalDays")); }
+                    else if (PlayerPrefs.GetInt("TotalDays", 0) > PlayerPrefs.GetInt("top5", 0)) { PlayerPrefs.SetInt("top5", PlayerPrefs.GetInt("TotalDays")); }
+                    PlayerPrefs.SetInt("TotalDays", -2);
                 }
                 else 
                 {
@@ -226,21 +318,45 @@ public class GameManager : MonoBehaviour
     public void NewCard()
     {
         int count = PlayerPrefs.GetInt("TotalDays", 0);
-        if (0 <= count && count <= 15) {
-			int rollDice = Random.Range(9, 20);
-        	LoadCard(resourceManager.cards[rollDice]);
-		} 
-        else if (15 <= count && count <= 30) {
-			int rollDice = Random.Range(9, 29);
-        	LoadCard(resourceManager.cards[rollDice]);
+        if (0 <= count && count <= 5) {
+            if (8 < cardbefore && cardbefore < 16) { rollDice = Random.Range(16, 20); }
+            if (15 < cardbefore && cardbefore < 21) { rollDice = Random.Range(9, 15); }
+            cardbefore = rollDice;
+            LoadCard(resourceManager.cards[rollDice]);
 		}
-        else if (30 <= count && count <= 45)
+        else if (5 <= count && count <= 20)
         {
-            int rollDice = Random.Range(9, 40);
+            if (8 < cardbefore && cardbefore < 16) { rollDice = Random.Range(16, 29); }
+            if (15 < cardbefore && cardbefore < 21) { rollDice = Random.Range(21, 29); }
+            if (20 < cardbefore && cardbefore < 26) { rollDice = Random.Range(9, 20); }
+            if (25 < cardbefore && cardbefore < 30) { rollDice = Random.Range(9, 25); }
+            cardbefore = rollDice;
             LoadCard(resourceManager.cards[rollDice]);
         }
-        else  if (45 <= count) {
-            int rollDice = Random.Range(9, resourceManager.cards.Length);
+        else if(20 <= count && count <= 35)
+        {
+            if (8 < cardbefore && cardbefore < 16) { rollDice = Random.Range(16, 40); }
+            if (15 < cardbefore && cardbefore < 21) { rollDice = Random.Range(21, 40); }
+            if (20 < cardbefore && cardbefore < 26) { rollDice = Random.Range(26, 40); }
+            if (25 < cardbefore && cardbefore < 30) { rollDice = Random.Range(9, 25); }
+            if (29 < cardbefore && cardbefore < 33) { rollDice = Random.Range(9, 29); }
+            if (32 < cardbefore && cardbefore < 37) { rollDice = Random.Range(9, 32); }
+            if (36 < cardbefore && cardbefore < 41) { rollDice = Random.Range(9, 36); }
+            cardbefore = rollDice;
+            LoadCard(resourceManager.cards[rollDice]);
+        }
+        else  if (45 <= count)
+        {
+            if (8 < cardbefore && cardbefore < 16) { rollDice = Random.Range(16, 48); }
+            if (15 < cardbefore && cardbefore < 21) { rollDice = Random.Range(21, 48); }
+            if (20 < cardbefore && cardbefore < 26) { rollDice = Random.Range(26, 48); }
+            if (25 < cardbefore && cardbefore < 30) { rollDice = Random.Range(30, 48); }
+            if (29 < cardbefore && cardbefore < 33) { rollDice = Random.Range(9, 29); }
+            if (32 < cardbefore && cardbefore < 37) { rollDice = Random.Range(9, 32); }
+            if (36 < cardbefore && cardbefore < 41) { rollDice = Random.Range(9, 36); }
+            if (40 < cardbefore && cardbefore < 45) { rollDice = Random.Range(9, 40); }
+            if (44 < cardbefore && cardbefore < 49) { rollDice = Random.Range(9, 44); }
+            cardbefore = rollDice;
             LoadCard(resourceManager.cards[rollDice]);
         }
 
