@@ -15,7 +15,8 @@ MonoBehaviour:
   cardID: 0
   sprite: 3
   cardName: 
-  dialogue: Your fans have trampled you
+  dialogue: You became very popular in university. At some point you got run over
+    by a crowd of people to death.
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0

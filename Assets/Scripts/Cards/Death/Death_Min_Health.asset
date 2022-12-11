@@ -15,7 +15,8 @@ MonoBehaviour:
   cardID: 0
   sprite: 4
   cardName: 
-  dialogue: Your heart has stopped
+  dialogue: You have consumed too much drugs with your friends and died of a heart
+    attack.
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0

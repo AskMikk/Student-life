@@ -15,7 +15,7 @@ MonoBehaviour:
   cardID: 0
   sprite: 0
   cardName: 
-  dialogue: Money at 0! You freeze without heating
+  dialogue: You ran out of money. Soon after you got set to jail for stealing.
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0

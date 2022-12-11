@@ -15,7 +15,8 @@ MonoBehaviour:
   cardID: 0
   sprite: 1
   cardName: 
-  dialogue: You got robbed and shot!
+  dialogue: You became so rich, that you did tax evasion. The Government found out 
+    and you got arrested.
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0

@@ -15,7 +15,8 @@ MonoBehaviour:
   cardID: 0
   sprite: 4
   cardName: 
-  dialogue: You have been kidnapped for organs!
+  dialogue: Recently you started working out. But your heart could not deal with
+    the stress and you died due to a heart attack.
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0
