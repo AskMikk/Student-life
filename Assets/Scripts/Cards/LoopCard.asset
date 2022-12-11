@@ -15,8 +15,7 @@ MonoBehaviour:
   cardID: -1
   sprite: 7
   cardName: LoopCard
-  dialogue: You died in the university. But your body and soul respawned on the 1st
-    September 1980 and you need to start again.
+  dialogue: You woke up, on the calendar again September 1
   leftQuote: Go Again
   rightQuote: Go Again
   RiCrown: 0

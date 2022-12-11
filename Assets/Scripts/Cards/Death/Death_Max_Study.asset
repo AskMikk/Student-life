@@ -15,8 +15,8 @@ MonoBehaviour:
   cardID: 0
   sprite: 6
   cardName: 
-  dialogue: You invested a lot of time into studies. After college you couldn't find
-    a job and commited suicide.
+  dialogue: You invested a lot of time into studies. But after college you couldn't
+    find a job and commited suicide.
   leftQuote: Menu
   rightQuote: Menu
   RiCrown: 0
