@@ -67,4 +67,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Char5");
     }
 
+    public void Records()
+    {
+        SceneManager.LoadScene("Records");
+    }
+
 }
